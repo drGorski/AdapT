@@ -1,6 +1,6 @@
 # AdapT Smart Contract Design Pattern
 
-The pattern allows for the ``reuse`` of verification rules and ensures the ``self-adaptability`` of a smart contract to any number of transaction types. It employs distinct configurations for each transaction type. 
+The pattern allows for the ``reuse`` of verification rules and ensures the ``self-adaptability`` of a smart contract to any number of transaction types. It employs a distinct configuration for each transaction type.
 
 Verification rule objects are shared among configurations at run-time. Thus the ``redundancy`` of logical conditions was ``eliminated``. 
 
