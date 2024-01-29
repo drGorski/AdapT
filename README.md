@@ -1,6 +1,6 @@
 # AdapT 
 
-## Design Pattern for Self-Adaptive Smart Contracts
+## Design Pattern AdapT for Self-Adaptive Smart Contracts
 
 The pattern allows for the ``reuse`` of verification rules and ensures the ``self-adaptability`` of a smart contract to any number of transaction types. It employs a distinct configuration for each transaction type.
 
