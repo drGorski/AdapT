@@ -1,4 +1,6 @@
-package pl.gdansk.ug.adapt;
+package concreteSC;
+
+import adapT.AbstractTransaction;
 
 public abstract sealed class Transaction extends AbstractTransaction permits TransactionIn, TransactionCross, TransactionGrid {
     private double quantity;
@@ -8,10 +10,8 @@ public abstract sealed class Transaction extends AbstractTransaction permits Tra
     private double targetBatteryEnergySurplus;
     private int sourceID;
     private int targetID;
-    private int sourceCommunityID;
-    private int targetCommunityID;
 
-    public Transaction(double quantity, double sSurplus, double tNeed, double targetProduction, double targetBatteryEnergySurplus, int sID, int tID, int sCID, int tCID) {
+    public Transaction(double quantity, double sSurplus, double tNeed, double targetProduction, double targetBatteryEnergySurplus, int sID, int tID) {
         this.quantity = quantity;
         this.sourceSurplus = sSurplus;
         this.targetNeed = tNeed;
@@ -19,8 +19,6 @@ public abstract sealed class Transaction extends AbstractTransaction permits Tra
         this.targetBatteryEnergySurplus = targetBatteryEnergySurplus;
         this.sourceID = sID;
         this.targetID = tID;
-        this.sourceCommunityID = sCID;
-        this.targetCommunityID = tCID;
     }
 
     public double getQuantity() {
@@ -37,12 +35,6 @@ public abstract sealed class Transaction extends AbstractTransaction permits Tra
     }
     public int getTargetID() {
         return targetID;
-    }
-    public int getSourceCommunityID() {
-        return sourceCommunityID;
-    }
-    public int getTargetCommunityID() {
-        return targetCommunityID;
     }
 
     public double getTargetProduction() { return targetProduction; }
